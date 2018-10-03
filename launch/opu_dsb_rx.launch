@@ -1,27 +1,22 @@
 <launch>
 
   <node pkg = "opu_dsb_rx"
-  	name = "sis_bias_v_reader"
+  	name = "sis_bias_vol_reader"
 	type = "relay.py">
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "sis_bias_i_reader"
+  	name = "sis_bias_cur_reader"
 	type = "relay.py">
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "sis_bias_v_cmd_writer"
+  	name = "sis_bias_vol_writer"
 	type = "relay.py" />
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "sis_bias_v_locker"
-	type = "relay.py" />
-  </node>
-
-  <node pkg = "opu_dsb_rx"
-  	name = "sis_bias_v_locker"
+  	name = "sis_bias_vol_locker"
 	type = "relay.py" />
   </node>
 
@@ -31,12 +26,22 @@
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "pm_average_reader"
+  	name = "pm_ave_reader"
 	type = "relay.py" />
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "pm_average_cmd_writer"
+  	name = "pm_ave_cmd_writer"
+	type = "relay.py" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+  	name = "chopper_onoff_writer"
+	type = "relay.py" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+  	name = "chopper_onoff_reader"
 	type = "relay.py" />
   </node>
 
@@ -46,12 +51,12 @@
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "chopper_speed_cmd_writer"
+  	name = "chopper_speed_writer"
 	type = "relay.py" />
   </node>
 
   <node pkg = "opu_dsb_rx"
-  	name = "chopper_speed_locker"
+  	name = "chopper_onoff_locker"
 	type = "relay.py" />
   </node>
 
