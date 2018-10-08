@@ -1,0 +1,17 @@
+<launch>
+
+  <node pkg = "opu_dsb_rx"
+  	name = "chopper_speed_locker"
+	type = "relay.py">
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+  	name = "chopper_speed_reader"
+	type = "relay.py">
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+  	name = "chopper_speed_cmd_writer"
+	type = "relay.py" />
+  </node>
+
