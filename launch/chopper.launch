@@ -24,8 +24,8 @@
   <node pkg = "opu_dsb_rx"
         name = "chopper_speed_reader"
         type = "relay.py">
-      <param name = "config_file"
-             value = "$(find opu_dsb_rx)/relay_conf/chopper_speed_reader.conf" />
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_speed_reader.conf" />
   </node>
 
   <node pkg = "opu_dsb_rx"
