@@ -1,0 +1,32 @@
+<launch>
+
+  <node name = "sis_i_reader"
+        type = "relay.py"
+        pkg = "opu_dsb_rx">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/sis_bias_i_reader.conf" />
+  </node>
+    
+  <node name = "sis_v_reader"
+        type = "relay.py"
+        pkg = "opu_dsb_rx">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/sis_bias_v_reader.conf" />
+  </node>
+
+  <node name = "sis_bias_v_cmd_writer"
+        type = "relay.py"
+        pkg = "opu_dsb_rx">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/sis_bias_v_cmd_writer.conf" />
+  </node>
+
+  <node name = "sis_bias_v_locker"
+        type = "relay.py"
+        pkg = "opu_dsb_rx">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/sis_vias_v_locker.conf" />
+  </node>
+
+  
+</launch>

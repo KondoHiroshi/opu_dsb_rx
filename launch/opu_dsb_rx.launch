@@ -83,6 +83,7 @@
         type = "relay.py" />
      <param name = "config_file"
             value = "$(find opu_dsd_rx)/relay_conf/chopper_onoff_locker.conf" />
+
   </node>
 
 </launch>

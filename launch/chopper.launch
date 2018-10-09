@@ -1,0 +1,38 @@
+<launch>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_onoff_locker"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_onoff_locker.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_onoff_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_onoff_reader.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_onoff_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_onoff_writer.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_speed_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_speed_reader.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_speed_writer"
+        type = "relay.py">
+      <param name = "config_file"
+             value = "$(find opu_dsb_rx)/relay_conf/chopper_speed_writer.conf" />
+  </node>
+
+</launch>
