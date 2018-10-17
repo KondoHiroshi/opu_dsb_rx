@@ -51,10 +51,17 @@
   </node>
   -->
   <node pkg = "opu_dsb_rx"
-        name = "chopper_onoff_writer"
+        name = "chopper_jog_onoff_writer"
         type = "relay.py">
     <param name = "config_file"
-           value = "$(find opu_dsb_rx)/relay_conf/chopper_onoff_writer.conf" />
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_jog_onoff_writer.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_ptp_onoff_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_ptp_onoff_writer.conf" />
   </node>
 
   <node pkg = "opu_dsb_rx"
@@ -77,6 +84,21 @@
     <param name = "config_file"
            value = "$(find opu_dsb_rx)/relay_conf/chopper_speed_writer.conf" />
   </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_degree_reader"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_degree_reader.conf" />
+  </node>
+
+  <node pkg = "opu_dsb_rx"
+        name = "chopper_degree_writer"
+        type = "relay.py">
+    <param name = "config_file"
+           value = "$(find opu_dsb_rx)/relay_conf/chopper_degree_writer.conf" />
+  </node>
+
   <!--
   <node pkg = "opu_dsb_rx"
         name = "chopper_onoff_locker"
